@@ -17,6 +17,14 @@ function calcularEdad(fechaNacimiento) {
   // Calculamos la edad restando el año actual menos el año de nacimiento
   var edad = añoActual - añoNacimiento;
 
+// Si el mes actual es menor al mes de nacimiento, o si son iguales pero el día actual es menor que el día de nacimiento,
+  // significa que la persona todavía no ha cumplido años, por lo que restamos uno a la edad
+  if (mesActual < mesNacimiento || (mesActual == mesNacimiento && diaActual < diaNacimiento)) {
+    edad--;
+  }
 
-
+  // Devolvemos la edad calculada
+  return edad;
 }
+
+
