@@ -13,4 +13,10 @@ function calcularEdad(fechaNacimiento) {
   var mesNacimiento = fechaNacimiento.getMonth() + 1;
   // Obtenemos el día de nacimiento
   var diaNacimiento = fechaNacimiento.getDate();
+
+  // Calculamos la edad restando el año actual menos el año de nacimiento
+  var edad = añoActual - añoNacimiento;
+
+
+
 }
