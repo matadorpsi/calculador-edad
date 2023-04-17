@@ -27,4 +27,21 @@ function calcularEdad(fechaNacimiento) {
   return edad;
 }
 
+// Pedimos al usuario que ingrese su fecha de nacimiento
+var fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (en formato DD/MM/AAAA):");
 
+ 
+
+// Convertimos la fecha de nacimiento en un objeto Date
+var partesFecha = fechaNacimiento.split("/");
+var fechaNacimientoObj = new Date(partesFecha[2], partesFecha[1] - 1, partesFecha[0]);
+
+ 
+
+// Calculamos la edad usando la función que definimos anteriormente
+var edad = calcularEdad(fechaNacimientoObj);
+
+ 
+
+// Mostramos la edad en la pantalla
+alert("Tu edad es " + edad + " años.");
